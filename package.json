@@ -1,0 +1,24 @@
+{
+  "name": "handoff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node --presets env,stage-2 src/index.js",
+    "compile": "babel src --out-dir .compiled --source-maps --watch",
+    "build": "rm lib/* && babel src -d lib"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "express-pino-logger": "^4.0.0",
+    "nodemon": "^1.18.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4"
+  }
+}
